@@ -3,4 +3,31 @@
 html, 
 body {
   font-family: 'Montserrat', sans-serif;
+  background-color: #000;
+}
+
+
+.nasa-image-container {
+  margin: 10px auto;
+  padding: 0;
+  justify-content: center;
+  display: flex;
+  
+}
+
+.nasa-image-container img {
+  width: 85vw;
+  max-width: 90vw;
+  max-height: 90vh;
+  border: 5px solid #fff;
+  border-radius: 30px;
+  margin: 10px;
+}
+
+.nasa-image-container h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  margin: 10px;
+  padding-left: 10px;
 }
