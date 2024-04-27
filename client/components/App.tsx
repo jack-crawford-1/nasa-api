@@ -19,8 +19,6 @@ function App() {
     return <p>No data found</p>
   }
 
-  // const DummyImage = <img src="https://starwalk.space/gallery/images/what-is-space/1920x1080.jpg" alt="dummy img" />
-
   console.log(data)
 
   return (
@@ -31,7 +29,6 @@ function App() {
       <p>{new Date(data.date).toLocaleDateString()}</p>
       <p>Image by: {data?.copyright}</p>
       <p>{data?.explanation}</p>
-      {/* {DummyImage} */}
     </div>
   )
 }
