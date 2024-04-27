@@ -6,44 +6,51 @@ body {
   font-family: Strait;
   background-color: #000;
   color: #ffffffed;
+  background-image: url('/space-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
 .outer-container {
   margin: 0 auto;
   padding: 0;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: block;
+  background: rgba(0, 0, 0, 0.193);
+
+
 }
   
-
 .main-container {
+  margin: 40px;
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
+  justify-content: center; 
+  flex-wrap: wrap;
 }
 
 
 .main-left-container {
-  margin: 10px;
-  width: 30%;
-  border: 5px solid #fff;
+  padding: 15px;
+  margin-right: 100px;
   border-radius: 30px;
-
+  width: 400px;
+ 
+  
 }
 
 .main-right-container {
-  margin: 10px;
   justify-content: center;
-  width: 70%;
+  width: fit-content;
+  
+
 }
 
 img {
-  width: 100%;
-  border: 5px solid #fff;
+  border: 5px solid #ffffffbd;
   border-radius: 30px;
+  max-height: 80vh;
+  max-width: 100%;
 }
 
 h1{
@@ -51,6 +58,10 @@ h1{
   font-size: 2.5rem;
   margin: 10px;
   padding-left: 10px;
+  padding-top: 10px;
+  display: flex; 
+  align-items: center;
+  justify-content: center
 }
 
 
@@ -59,7 +70,7 @@ h2 {
   font-size: 2rem;
   margin: 10px;
   padding-left: 10px;
-  color: #cf1f1f;
+  color: #c43232;
 
 }
 
@@ -68,12 +79,22 @@ h3 {
   font-size: 1.5rem;
   margin: 10px;
   padding-left: 10px;
+  color: #456ee0d8;
 }
 
 p {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 10px;
+  padding-top: 30px;
   padding-left: 10px;
   line-height: 1.7rem;
+  color: #ffffffbd;
+}
+
+span img {
+  border: none;
+  height: 1em;
+  padding-left: 5px;
+  padding-right: 5px;
 }
