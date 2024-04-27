@@ -8,6 +8,21 @@ server.use(express.json())
 
 server.use('/api/v1/nasa', nasaRoutes)
 
+server.use(
+  (
+    err: Error,
+    req: express.Request,
+    res: express.Response,
+    next: express.NextFunction,
+  ) => {
+    console.error(err)
+    if (res.headersSent) {
+      return next(err)
+    }
+    res.status(500).json({ error: 'Internal Server Error' })
+  },
+)
+
 if (process.env.NODE_ENV === 'production') {
   server.use(express.static(Path.resolve('public')))
   server.use('/assets', express.static(Path.resolve('./dist/assets')))
