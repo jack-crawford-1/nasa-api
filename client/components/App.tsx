@@ -22,13 +22,19 @@ function App() {
   console.log(data)
 
   return (
-    <div className="nasa-image-container">
-      <h1>NASA Image Of The Day</h1>
-      <p>{data.title}</p>
-      <img src={data?.hdurl} alt="Nasa" />
-      <p>{new Date(data.date).toLocaleDateString()}</p>
-      <p>Image by: {data?.copyright}</p>
-      <p>{data?.explanation}</p>
+    <div className="outer-container">
+      <h1>Image of the Day from the NASA API</h1>
+      <div className="main-container">
+        <div className="main-left-container">
+          <h2>{data.title}</h2>
+          <p>{new Date(data.date).toLocaleDateString()}</p>
+          <h3>Image by: {data?.copyright}</h3>
+          <p>{data?.explanation}</p>
+        </div>
+        <div className="main-right-container">
+          <img src={data?.hdurl} alt="Nasa" />
+        </div>
+      </div>
     </div>
   )
 }
