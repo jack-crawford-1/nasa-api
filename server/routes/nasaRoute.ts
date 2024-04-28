@@ -6,9 +6,9 @@ const router = express.Router()
 const token = process.env.NASA_API_TOKEN
 
 router.get('/', async (req, res, next) => {
-  if (token === undefined) {
-    throw new Error('NASA_API_TOKEN is not defined')
-  }
+  // if (token === undefined) {
+  //   throw new Error('NASA_API_TOKEN is not defined')
+  // }
 
   try {
     const nasaImages = await request.get(
