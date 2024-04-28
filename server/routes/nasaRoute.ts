@@ -3,9 +3,9 @@ import request from 'superagent'
 import 'dotenv/config'
 
 const router = express.Router()
+const token = process.env.NASA_API_TOKEN
 
 router.get('/', async (req, res, next) => {
-  const token = process.env.NASA_API_TOKEN
   if (token === undefined) {
     throw new Error('NASA_API_TOKEN is not defined')
   }
